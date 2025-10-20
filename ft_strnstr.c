@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:46:24 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 20:12:02 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:06:26 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -70,3 +70,4 @@ int main(void)
 
 	return 0;
 }
+*/

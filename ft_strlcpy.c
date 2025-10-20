@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:24:25 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 20:01:13 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:06:08 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	return (src_len);
 }
 
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -46,3 +46,4 @@ int main(void)
 
 	return 0;
 }
+*/

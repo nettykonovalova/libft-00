@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:24:42 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 20:13:07 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/20 16:06:40 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -51,3 +51,4 @@ int main(void)
 
 	return 0;
 }
+*/
