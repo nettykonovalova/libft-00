@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   2.c                                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:34:53 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/22 16:27:55 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/22 16:06:31 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+typedef struct s_tok
+{
+	size_t	cursor;
+	size_t	start;
+	size_t	len;
+}	t_tok;
+
 
 static size_t	count_words(const char *s, char c)
 {
@@ -31,7 +39,7 @@ static size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-static char	**free_split(char **arr, size_t used)
+static void	free_split(char ** arr, size_t used)
 {
 	size_t	i;
 
@@ -42,53 +50,47 @@ static char	**free_split(char **arr, size_t used)
 		i++;
 	}
 	free (arr);
-	return (NULL);
 }
 
-static char	*next_token(char const *s, char c)
+static int	next_token(char const *s, char c, t_tok *t)
 {
 	size_t	i;
-	char	*word;
 
-	i = 0;
-	while (s[i] && s[i] != c)
+	i = t->cursor;
+	while (s[i] && s[i] == c)
 		i++;
-	word = malloc((i + 1) * sizeof(char));
-	if (!word)
-		return (NULL);
-	i = 0;
-	while (s[i] && s[i] != c)
+	if (!s[i])
 	{
-		word[i] = s[i];
-		i++;
+		t->cursor = i;
+		return (0);
 	}
-	word[i] = '\0';
-	return (word);
+	t->start = i;
+	while (s[i] && s[i] != c)
+		i++;
+	t->len = i - t->start;
+	t->cursor = i;
+	return (1);
 }
 
-static char	**fill_words(char const *s, char c, char **arr)
+static int	fill_words(char **arr, char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	t_tok	t;
+	size_t	k;
 
-	i = 0;
-	j = 0;
-	while (s[i])
+	t.cursor = 0;
+	k = 0;
+	while (next_token(s, c, &t))
 	{
-		if (s[i] != c)
-		{
-			arr[j] = next_token(&s[i], c);
-			if (!arr[j])
-				return (free_split(arr, j));
-			while (s[i] && s[i] != c)
-				i++;
-			j++;
+		arr[k] = ft_substr(s, t.start, t.len);
+		if (!arr[k])
+		{	
+			free_split(arr, k);
+			return (-1);
 		}
-		else
-			i++;
+		k++;
 	}
-	arr[j] = NULL;
-	return (arr);
+	arr[k] = NULL;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -99,10 +101,12 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = count_words(s, c);
-	arr = malloc((words + 1) * sizeof(char *));
+	arr = malloc((words + 1) * sizeof * arr);
 	if (!arr)
 		return (NULL);
-	return (fill_words(s, c, arr));
+	if (fill_words(arr, s, c) < 0)
+		return (NULL);
+	return (arr);
 }
 /*
 #include <stdio.h>
