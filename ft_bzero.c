@@ -6,16 +6,16 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:14:46 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 11:32:25 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:26:00 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *b;
-	size_t	i;
+	unsigned char	*b;
+	size_t			i;
 
 	i = 0;
 	b = (unsigned char *)s;

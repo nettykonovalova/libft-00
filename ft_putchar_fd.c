@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 11:24:53 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/27 18:41:56 by akonoval         ###   ########.fr       */
+/*   Created: 2025/10/24 18:39:22 by akonoval          #+#    #+#             */
+/*   Updated: 2025/10/27 18:42:11 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
+	write(fd, &c, 1);
 }
 /*
-#include <stdio.h>
-
-int main(void)
+int	main(void)
 {
-	printf("%c\n", ft_toupper('a')); // A
-	printf("%c\n", ft_toupper('Z')); // Z
-	printf("%c\n", ft_toupper('!')); // !
+	ft_putchar_fd('E', 2);
 }
 */

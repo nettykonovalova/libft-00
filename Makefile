@@ -2,10 +2,15 @@
 # ========== Variables ==========
 
 NAME = libft.a
+
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
+
 AR = ar rcs
+
 RM = rm -f
+
 SRCS = ft_bzero.c \
 	ft_isdigit.c \
 	ft_memset.c \
@@ -27,16 +32,21 @@ SRCS = ft_bzero.c \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_atoi.c \
-	ft_calloc \
-	ft_strdup \
-	ft_substr \
-	ft_strjoin \
-	ft_strtrim \
-	ft_split \
-	ft_itoa \
-	ft_strmapi
-OBJS = $(SRCS:.c=.o)
+	ft_calloc.c \
+	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
 
+OBJS = $(SRCS:.c=.o)
 
 # ========== Rules ==========
 
@@ -44,8 +54,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-
-$(OBJS): libft.h
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

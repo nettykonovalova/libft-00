@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:36:52 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/20 16:07:28 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:41:58 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
-	size_t	i;
 	char	*substr;
 
 	if (!s)

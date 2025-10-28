@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:24:13 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 14:58:04 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:46:29 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 11:25:04 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 19:48:20 by akonoval         ###   ########.fr       */
+/*   Created: 2025/10/24 18:56:09 by akonoval          #+#    #+#             */
+/*   Updated: 2025/10/27 17:44:59 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char dest[20];
-	const char *src = "Hello";
-	printf("%zu\n", ft_strlcpy(dest, src, 20));
-	return 0;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-

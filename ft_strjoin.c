@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:34:45 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/20 17:43:01 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:42:05 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t len1;
-	size_t len2;
-	size_t total_len;
+	size_t	len1;
+	size_t	len2;
+	size_t	total_len;
 	char	*result;
 
 	if (!s1 || !s2)

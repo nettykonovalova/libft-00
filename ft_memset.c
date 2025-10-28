@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:24:05 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/17 11:32:15 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:42:12 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *s;
-	size_t	i;
+	unsigned char	*s;
+	size_t			i;
 
 	i = 0;
 	s = (unsigned char *)b;

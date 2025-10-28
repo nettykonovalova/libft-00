@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:04:05 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/23 17:55:33 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:33:15 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	count_digits(int n)
 {
-	int	len;
+	int		len;
 	long	temp;
 
 	len = 0;
@@ -37,9 +37,9 @@ static int	count_digits(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int	len;
+	int		len;
 	long	nb;
-	
+
 	nb = n;
 	len = count_digits(n);
 	str = malloc(len + 1);
@@ -47,10 +47,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	str[len] = '\0';
 	if (nb == 0)
-	{
-		str[0] = '0';
-		return (str);
-	}
+		return (str[0] = '0', str);
 	if (nb < 0)
 	{
 		str[0] = '-';

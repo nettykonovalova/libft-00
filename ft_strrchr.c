@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:24:42 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/20 16:06:40 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:41:59 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	slen;
+	ssize_t	slen;
 
-	slen = ft_strlen(s);
+	slen = (ssize_t)ft_strlen(s);
 	while (slen >= 0)
 	{
-		if (s[slen] == (char)c)
+		if ((unsigned char)s[slen] == (unsigned char)c)
 			return ((char *)&s[slen]);
 		slen--;
 	}

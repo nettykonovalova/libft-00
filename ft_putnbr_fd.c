@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 11:24:53 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/27 18:41:56 by akonoval         ###   ########.fr       */
+/*   Created: 2025/10/24 18:58:26 by akonoval          #+#    #+#             */
+/*   Updated: 2025/10/27 18:42:09 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
-}
-/*
-#include <stdio.h>
+	long	nb;
 
-int main(void)
-{
-	printf("%c\n", ft_toupper('a')); // A
-	printf("%c\n", ft_toupper('Z')); // Z
-	printf("%c\n", ft_toupper('!')); // !
+	nb = n;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putchar_fd(nb % 10 + '0', fd);
 }
-*/

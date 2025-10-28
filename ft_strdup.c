@@ -6,7 +6,7 @@
 /*   By: akonoval <akonoval@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:25:29 by akonoval          #+#    #+#             */
-/*   Updated: 2025/10/20 16:05:52 by akonoval         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:42:06 by akonoval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t len;
+	size_t	len;
 	char	*copy;
 
 	len = ft_strlen(s);
